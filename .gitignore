@@ -1,0 +1,24 @@
+### Vert.x ###
+.vertx/
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# maven
+.mvn/
+
+# Ignore Maven Target Build
+/target/
+
+# Ignore IntelliJ Idea Folders
+.idea/
+
+# Package Files #
+*.jar
+
+# edit confing
+.editorconfig
+
