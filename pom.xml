@@ -59,6 +59,7 @@
       </plugin>
     </plugins>
   </build>
+
   <dependencies>
     <dependency>
       <artifactId>vertx-core</artifactId>
@@ -82,7 +83,20 @@
       <scope>test</scope>
       <version>${junit-jupiter.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.google.flogger</groupId>
+      <artifactId>flogger</artifactId>
+      <version>${flogger.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.flogger</groupId>
+      <artifactId>flogger-log4j2-backend</artifactId>
+      <version>${flogger.version}</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -112,6 +126,7 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <vertx.version>4.3.7</vertx.version>
+    <flogger.version>0.7.4</flogger.version>
   </properties>
 
   <version>1.0.0-SNAPSHOT</version>
