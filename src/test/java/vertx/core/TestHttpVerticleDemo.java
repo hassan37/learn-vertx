@@ -1,4 +1,4 @@
-package vertx;
+package vertx.core;
 
 import io.vertx.core.Vertx;
 import io.vertx.junit5.VertxExtension;
@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(VertxExtension.class)
-public class TestMainVerticle {
+public class TestHttpVerticleDemo {
 
   @BeforeEach
   void deploy_verticle(Vertx vertx, VertxTestContext testContext) {
-    vertx.deployVerticle(new MainVerticle(),
+    vertx.deployVerticle(new HttpVerticleDemo(),
       testContext.succeeding(id -> testContext.completeNow()));
   }
 

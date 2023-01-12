@@ -9,21 +9,24 @@
 
     <Console name="console-log" target="SYSTEM_OUT">
       <PatternLayout
-        pattern="[%style{%d{HH:mm:ss.SSS}}{yellow}] [%highlight{%p{length=1}}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=green}] [%style{%t}{blue}] [%style{%C{1}.%M:%L}{cyan}]: %highlight{%m%n}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=normal, DEBUG=normal}"/>
+        pattern="%yellow{%d{HH:mm:ss.SSS}} [%highlight{%p{length=1}}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green, DEBUG=green}] %magenta{%t} [%blue{%C{1}.%M:%L}]: %highlight{%m%n}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=normal, DEBUG=normal}"/>
     </Console>
+
+    <!--
     <Async name="console-async" bufferSize="65536">
       <AppenderRef ref="console-log"/>
     </Async>
+    -->
 
   </Appenders>
 
   <Loggers>
 
-    <Logger name="vertx" level="DEBUG">
-      <AppenderRef ref="console-async"/>
+    <Logger name="vertx" level="DEBUG" additivity="false">
+      <AppenderRef ref="console-log"/>
     </Logger>
 
-    <Root level="WARN">
+    <Root level="WARN" additivity="false">
       <AppenderRef ref="console-log"/>
     </Root>
 

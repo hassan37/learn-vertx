@@ -118,7 +118,7 @@
 
     <junit-jupiter.version>5.7.0</junit-jupiter.version>
     <launcher.class>io.vertx.core.Launcher</launcher.class>
-    <main.verticle>learn-vertx.MainVerticle</main.verticle>
+    <main.verticle>learn-vertx.core.HttpVerticleDemo</main.verticle>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
     <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
